@@ -7,7 +7,11 @@ import luma.hunt.lobby.LobbyManager;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.network.ServerAddress;
+/*? >=1.20.2 {*/
+import net.minecraft.client.gui.screen.multiplayer.ConnectScreen;
+/*? } else {*/
 import net.minecraft.client.gui.screen.ConnectScreen;
+/*? }*/
 import net.minecraft.client.network.ServerInfo;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
@@ -74,6 +78,10 @@ public class JoinGameScreen extends AbstractLumaHuntScreen {
         MinecraftClient client = MinecraftClient.getInstance();
         ServerAddress address = new ServerAddress(ip, port);
         ServerInfo info = new ServerInfo("LH | Lobby", ip + ":" + port, false);
+        /*? <1.20.2 {*/
+        ConnectScreen.connect(client.currentScreen, client, address, info);
+        /*? } else {*/
         ConnectScreen.connect(client.currentScreen, client, address, info, false);
+        /*? }*/
     }
 }
