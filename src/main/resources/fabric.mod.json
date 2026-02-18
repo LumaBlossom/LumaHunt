@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "lumahunt",
+  "version": "${version}",
+  "name": "LumaHunt",
+  "description": "Play Manhunt-style game mechanics directly in the client.",
+  "authors": ["Luma"],
+  "contact": {
+    "homepage": "https://lumablooming.vercel.app",
+    "sources": "https://github.com/LumaBlossom/LumaHunt",
+    "issues": "https://github.com/LumaBlossom/LumaHunt/issues",
+    "discord": "https://discord.gg/lumahunt"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/lumahunt/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["luma.hunt.LumaHunt"],
+    "client": ["luma.hunt.LumaHuntClient"],
+    "modmenu": ["luma.hunt.client.config.LumaHuntModMenu"]
+  },
+  "mixins": ["lumahunt.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": ">=1.20 <1.22",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "e4mc_minecraft": "*"
+  }
+}

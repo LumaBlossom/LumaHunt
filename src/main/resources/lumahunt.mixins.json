@@ -1,0 +1,28 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "luma.hunt.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "TitleScreenMixin",
+    "GameMenuScreenMixin",
+    "ChatHudMixin",
+    "SelectWorldScreenMixin",
+    "CreateWorldScreenMixin",
+    "PlayerDamageMixin",
+    "HunterFreezeMixin",
+    "CameraFreezeMixin",
+    "ServerPlayerDeathMixin",
+    "ServerPlayerDamageMixin",
+    "ServerPlayerEntityMixin",
+    "CompassUseMixin",
+    "ServerNetworkIoMixin",
+    "IntegratedServerMixin",
+    "HunterRespawnMixin",
+    "CompassAnimationMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
+

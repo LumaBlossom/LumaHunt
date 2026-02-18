@@ -1,0 +1,93 @@
+plugins {
+	id 'fabric-loom' version "${loom_version}"
+	id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = "${project.archives_base_name}-${stonecutter.current.version}"
+}
+
+repositories {
+	maven { url "https://maven.terraformersmc.com/releases/" }
+	maven {
+	    url "https://api.modrinth.com/maven"
+	}
+}
+
+loom {
+	mods {
+		"lumahunt" {
+			sourceSet sourceSets.main
+		}
+	}
+
+}
+
+dependencies {
+	// To change the versions see the gradle.properties file
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	// Fabric API
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	
+	// Mod Menu (optional, for config button)
+	modImplementation "com.terraformersmc:modmenu:${project.mod_menu_version}"
+	
+	// Netty QUIC codec for e4mc tunneling
+	include implementation("io.netty.incubator:netty-incubator-codec-classes-quic:0.0.72.Final") {
+		exclude(group: "io.netty")
+	}
+	// Native QUIC libraries for each platform
+	include implementation("io.netty.incubator:netty-incubator-codec-native-quic:0.0.72.Final:linux-x86_64")
+	include implementation("io.netty.incubator:netty-incubator-codec-native-quic:0.0.72.Final:windows-x86_64")
+	include implementation("io.netty.incubator:netty-incubator-codec-native-quic:0.0.72.Final:osx-x86_64")
+}
+
+processResources {
+	inputs.property "version", project.version
+	inputs.property "minecraft_version", project.minecraft_version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": inputs.properties.version, "minecraft_version": inputs.properties.minecraft_version
+	}
+}
+
+// Java version handling for different MC versions
+def javaVersion = stonecutter.compare(stonecutter.current.version, "1.20.6") >= 0 ? 21 : 17
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = javaVersion
+}
+
+java {
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.toVersion(javaVersion)
+	targetCompatibility = JavaVersion.toVersion(javaVersion)
+}
+
+jar {
+	inputs.property "archivesName", project.base.archivesName
+
+	from("LICENSE") {
+		rename { "${it}_${inputs.properties.archivesName}"}
+	}
+}
+
+// configure the maven publication
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+			artifactId = project.archives_base_name
+			from components.java
+		}
+	}
+
+	repositories {
+	}
+}

@@ -1,0 +1,40 @@
+{
+  "lumahunt.screen.config.title": "Налаштування LumaHunt",
+  "lumahunt.screen.config.offline_mode": "Без ліцензії (e4mc)",
+  "lumahunt.screen.config.offline_desc": "§7Дозволити вхід гравцям без ліцензії через тунель.",
+  "lumahunt.screen.config.offline_warning": "§cУвага: Вимикає автентифікацію!",
+  
+  "lumahunt.screen.lobby.title": "Лобі",
+  "lumahunt.screen.lobby.show": "☆ Показати",
+  "lumahunt.screen.lobby.hide": "★ Приховати",
+  "lumahunt.screen.lobby.copy": "Копіювати",
+  "lumahunt.screen.lobby.settings": "✎ Налаштування",
+  "lumahunt.screen.lobby.start": "▶ Старт",
+  "lumahunt.screen.lobby.close": "✘ Закрити",
+  "lumahunt.screen.lobby.leave": "⏴ Вийти",
+  "lumahunt.screen.lobby.code": "§7Код: §f%s",
+  
+  "lumahunt.screen.mode.host": "⚔ Створити",
+  "lumahunt.screen.mode.join": "▶ Увійти",
+  "lumahunt.screen.mode.close": "✘ Закрити",
+  "lumahunt.screen.mode.select": "Оберіть режим",
+
+  "lumahunt.screen.settings.max_players": "Макс. гравців",
+  "lumahunt.screen.settings.save": "✔ Зберегти",
+  "lumahunt.screen.settings.back": "⏴ Назад",
+  "lumahunt.screen.settings.title_edit": "✎ Налаштування гри",
+  "lumahunt.screen.settings.title": "Налаштування",
+  
+  "lumahunt.screen.join.action": "▶ Увійти",
+  "lumahunt.screen.join.back": "⏴ Назад",
+  "lumahunt.screen.join.title": "Введіть код лобі",
+  "lumahunt.screen.join.placeholder": "Код",
+  
+  "lumahunt.lobby.error.singleplayer": "Помилка | Ви повинні бути в одиночному світі!",
+  "lumahunt.lobby.error.lan": "Помилка | Не вдалося відкрити LAN!",
+  "lumahunt.lobby.ready": "Лобі готове",
+  "lumahunt.lobby.code.msg": "Код: %s",
+  
+  "lumahunt.tracker.tracking": "§dЦіль: §f%s",
+  "lumahunt.tracker.item_name": "§dКомпас на: §f%s"
+}

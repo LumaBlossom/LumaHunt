@@ -1,0 +1,40 @@
+{
+  "lumahunt.screen.config.title": "LumaHunt Settings",
+  "lumahunt.screen.config.offline_mode": "Allow Offline Players (e4mc)",
+  "lumahunt.screen.config.offline_desc": "§7Allow players without paid accounts to join via tunnel.",
+  "lumahunt.screen.config.offline_warning": "§cWarning: Disables authentication!",
+  
+  "lumahunt.screen.lobby.title": "Lobby",
+  "lumahunt.screen.lobby.show": "☆ Show",
+  "lumahunt.screen.lobby.hide": "★ Hide",
+  "lumahunt.screen.lobby.copy": "Copy",
+  "lumahunt.screen.lobby.settings": "✎ Settings",
+  "lumahunt.screen.lobby.start": "▶ Start",
+  "lumahunt.screen.lobby.close": "✘ Close",
+  "lumahunt.screen.lobby.leave": "⏴ Leave Lobby",
+  "lumahunt.screen.lobby.code": "§7Code: §f%s",
+  
+  "lumahunt.screen.mode.host": "⚔ Host Game",
+  "lumahunt.screen.mode.join": "▶ Join Game",
+  "lumahunt.screen.mode.close": "✘ Close",
+  "lumahunt.screen.mode.select": "Select Game Mode",
+  
+  "lumahunt.screen.settings.max_players": "Max Players",
+  "lumahunt.screen.settings.save": "✔ Save",
+  "lumahunt.screen.settings.back": "⏴ Back",
+  "lumahunt.screen.settings.title_edit": "✎ Game Settings",
+  "lumahunt.screen.settings.title": "Settings",
+  
+  "lumahunt.screen.join.action": "▶ Join",
+  "lumahunt.screen.join.back": "⏴ Back",
+  "lumahunt.screen.join.title": "Enter Lobby Code",
+  "lumahunt.screen.join.placeholder": "Code",
+  
+  "lumahunt.lobby.error.singleplayer": "Err | You must be in a Singleplayer world!",
+  "lumahunt.lobby.error.lan": "Err | Failed to open LAN!",
+  "lumahunt.lobby.ready": "Lobby Ready",
+  "lumahunt.lobby.code.msg": "Code: %s",
+  
+  "lumahunt.tracker.tracking": "§dTracking: §f%s",
+  "lumahunt.tracker.item_name": "§dTracker: §f%s"
+}
