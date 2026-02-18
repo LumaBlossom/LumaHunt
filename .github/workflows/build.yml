@@ -17,7 +17,7 @@ jobs:
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
       - name: build
-        run: ./gradlew :versions:1.20.1:build :versions:1.20.4:build :versions:1.20.6:build :versions:1.21:build :versions:1.21.1:build :versions:1.21.3:build :versions:1.21.4:build
+        run: ./gradlew :1.20.1:build :1.20.4:build :1.20.6:build :1.21:build :1.21.1:build :1.21.3:build :1.21.4:build
       - name: consolidate artifacts
         run: |
           mkdir all-libs
