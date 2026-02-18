@@ -16,7 +16,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(ServerPlayerEntity.class)
 public abstract class ServerPlayerEntityMixin {
 
-    /*? <1.21 {*/
     @Inject(method = "moveToWorld", at = @At("HEAD"))
     private void onMoveToWorld(ServerWorld destination, CallbackInfoReturnable<ServerPlayerEntity> cir) {
         ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
@@ -34,24 +33,4 @@ public abstract class ServerPlayerEntityMixin {
             GameManager.getInstance().onRunnerEnterEndGateway(player.getServer(), player);
         }
     }
-    /*? } else {*/
-    @Inject(method = "teleportTo(Lnet/minecraft/world/TeleportTarget;)Lnet/minecraft/server/network/ServerPlayerEntity;", at = @At("HEAD"))
-    private void onTeleportTo(net.minecraft.world.TeleportTarget target, CallbackInfoReturnable<ServerPlayerEntity> cir) {
-        ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
-        if (!GameSettings.getInstance().isGameActive()) {
-            return;
-        }
-
-        Role role = LobbyManager.getInstance().getPlayerRole(player.getUuid());
-        if (role != Role.RUNNER) {
-            return;
-        }
-        
-        ServerWorld destination = target.world();
-        ServerWorld currentWorld = player.getServerWorld();
-        if (currentWorld.getRegistryKey() == World.END && destination.getRegistryKey() == World.OVERWORLD) {
-            GameManager.getInstance().onRunnerEnterEndGateway(player.getServer(), player);
-        }
-    }
-    /*? }*/
 }
