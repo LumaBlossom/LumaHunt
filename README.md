@@ -8,6 +8,8 @@ A Minecraft mod that integrates Manhunt-style game mechanics directly into the c
 [![Fabric](https://img.shields.io/badge/Fabric-F8F6E8?style=for-the-badge&logo=fabric&logoColor=3F2D23)](https://fabricmc.net/)
 [![License](https://img.shields.io/badge/License-CC0_1.0-61d0bc?style=for-the-badge&logo=creative-commons&logoColor=white)](https://creativecommons.org/publicdomain/zero/1.0/)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R71T92UU)
+
 </div>
 
 _If you have any issues, **PLEASE** report them on our [GitHub Issues](https://github.com/LumaBlossom/LumaHunt/issues) page._
