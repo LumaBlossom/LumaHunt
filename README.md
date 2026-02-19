@@ -4,7 +4,7 @@ A Minecraft mod that integrates Manhunt-style game mechanics directly into the c
 
 <div align="center">
 
-[![Minecraft](https://img.shields.io/badge/Minecraft-1.20--1.21.x-1f8b4c?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.21.x-1f8b4c?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
 [![Fabric](https://img.shields.io/badge/Fabric-F8F6E8?style=for-the-badge&logo=fabric&logoColor=3F2D23)](https://fabricmc.net/)
 [![License](https://img.shields.io/badge/License-CC0_1.0-61d0bc?style=for-the-badge&logo=creative-commons&logoColor=white)](https://creativecommons.org/publicdomain/zero/1.0/)
 

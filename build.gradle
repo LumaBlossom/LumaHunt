@@ -7,7 +7,7 @@ version = project.mod_version
 group = project.maven_group
 
 base {
-	archivesName = "${project.archives_base_name}-${stonecutter.current.version}"
+	archivesName = "${project.archives_base_name}-${project.minecraft_version}"
 }
 
 repositories {
@@ -58,7 +58,7 @@ processResources {
 }
 
 // Java version handling for different MC versions
-def javaVersion = stonecutter.compare(stonecutter.current.version, "1.20.6") >= 0 ? 21 : 17
+def javaVersion = 21
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.release = javaVersion
